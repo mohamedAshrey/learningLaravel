@@ -54,3 +54,7 @@ Route::get('comments/{comment}/edit', [ CommentController::class, 'edit'])->name
 Route::put('comments/{comment}', [ CommentController::class, 'update'])->name('comments.update');
 
 Route::delete('comments/{comment}', [ CommentController::class, 'destroy'])->name('comments.destroy');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
