@@ -6,15 +6,15 @@
     @method('put')
     <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-        <input type="text" class="form-control" id="title" name = "title" value="{{$post->title}}"  required >
+        <input type="text" class="form-control" id="title" name = "title" value="{{$post->title}}"   >
     </div>
     <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <input type="description" class="form-control" id="description" name = "description" value="{{$post->description}}" required>
+        <input type="description" class="form-control" id="description" name = "description" value="{{$post->description}}" >
     </div>
     <div class="mb-3">
         <label for="user_id" class="form-label">Posted By</label>
-    <select class="form-control" name="user_id" required>
+    <select class="form-control" name="user_id" >
         <option value="">Choose your username</option>x
     @foreach ($users as $user)
         <option value="{{$user->id}}" {{ $post->user_id == $user->id ? 'selected' : '' }}>{{$user->name}}</option>

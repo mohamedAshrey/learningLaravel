@@ -5,15 +5,15 @@
     @csrf
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
-    <input type="title" class="form-control" id="title" name = "title" required>
+    <input type="title" class="form-control" id="title" name = "title" >
   </div>
   <div class="mb-3">
     <label for="description" class="form-label">Description</label>
-    <input type="description" class="form-control" id="description" name = "description" required>
+    <input type="description" class="form-control" id="description" name = "description" >
   </div>
   <div class="mb-3">
     <label for="user_id" class="form-label">Posted By</label>
-    <select class="form-control" name="user_id" required>
+    <select class="form-control" name="user_id" >
       <option value="">Choose your username</option>
     @foreach ($users as $user)
         <option value="{{$user->id}}">{{$user->name}}</option>

@@ -57,7 +57,7 @@ class PostController extends Controller
         ]);
     }
 
-    public function update(Request $myRequestObject, $post)
+    public function update(StorePostRequest $myRequestObject, $post)
     {
         $post = Post::findOrFail($post);
         $data = $myRequestObject->all();
