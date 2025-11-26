@@ -11,6 +11,7 @@
       <th scope="col">#</th>
       <th scope="col">Title</th>
       <th scope="col">Posted by</th>
+      <th scope="col">Slug</th>
       <th scope="col">Created At</th>
       <th scope="col">Actions</th>
       <th scope="col">Comments</th>
@@ -22,6 +23,7 @@
         <th scope="row">{{ $post->id }}</th>
         <td>{{ $post->title }}</td>
         <td>{{ $post->user? $post->user->name: 'user not found' }}</td>
+        <td>{{ $post->slug? $post->slug: 'Slug not found' }}</td>
         <td>{{ $post->human_readable_date }}</td>
         <td>
             <a href="{{ route('posts.show',[ 'post'=> $post['id'] ]) }}" class="btn btn-primary">View</a>
